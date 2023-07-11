@@ -1,0 +1,56 @@
+{
+    "AS_Button_e65a3f4d0a214f74a3a3bb45ce2376f9": {
+        "id": "AS_Button_e65a3f4d0a214f74a3a3bb45ce2376f9",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": "",
+            "KUID": "jbf06e5a4a274e68928df71988fbba10",
+            "name": "frmRecipientDetails"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "NAVIGATE_TO_FORM__fb775909c21146ac817bfa403e152116",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmEditRecipient",
+            "formKUID": "gfbea982609c4f5dadc8491cc61ab81e",
+            "mappings": {
+                "ME_Mapping_e3879d31c96d47e98c7a7f1eedfc2f52": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e3879d31c96d47e98c7a7f1eedfc2f52",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "propertyKey": "lblRecipientIDValue_text",
+                        "widgetId": "lblRecipientIDValue",
+                        "widgetPath": "this.view.lblRecipientIDValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmRecipientDetails",
+                        "widgetKUID": "a3a7abf7420c4361a8960ae7cc0c5873",
+                        "itemKUID": "jbf06e5a4a274e68928df71988fbba10",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_e3879d31c96d47e98c7a7f1eedfc2f52"],
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "enableNavigationObj": true,
+            "navigationObj": "{\n    \"lblRecipientIDValue_text\": self.view.lblRecipientIDValue.text,\n    \"_meta_\": {\n        \"eventName\": \"\",\n        \"widgetId\": \"\"\n    }\n}",
+            "isCustomInput": false
+        }]
+    }
+}

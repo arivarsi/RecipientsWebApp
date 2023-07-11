@@ -1,0 +1,148 @@
+{
+    "AS_Button_fa04b98406414b6b90d491de34e06786": {
+        "id": "AS_Button_fa04b98406414b6b90d491de34e06786",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": "",
+            "KUID": "jbf06e5a4a274e68928df71988fbba10",
+            "name": "frmRecipientDetails"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "LOADING_INDICATOR_e42ac3ad48b5448da7c160871fbcd9d8",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "INVOKE_OBJECT_SERVICE_hadd2cb85f5f49688129c53ad9fe32e2",
+            "type": "INVOKE_OBJECT_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": null,
+            "isoffline": null,
+            "isobject": true,
+            "mappings": {
+                "ME_Mapping_dd97f03594a04360b3aa2b40d80784f6": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_dd97f03594a04360b3aa2b40d80784f6",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblRecipientIDValue",
+                        "widgetPath": "this.view.lblRecipientIDValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmRecipientDetails",
+                        "widgetKUID": "a3a7abf7420c4361a8960ae7cc0c5873",
+                        "itemKUID": "jbf06e5a4a274e68928df71988fbba10",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "RecipientID",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "delete"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_dd97f03594a04360b3aa2b40d80784f6"],
+            "serviceconfig": {
+                "servicename": "RecipientStorage",
+                "type": "objectsvcs",
+                "objectname": "Recipients",
+                "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                "methodname": "delete"
+            },
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_c3fd1d8f1c2b4afab2dce2906aca3c49",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_OBJECT_SERVICE_hadd2cb85f5f49688129c53ad9fe32e2",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_IF_CONDITION_bb751d45fecf4775bf7ef497bfa145d2",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValue": "Recipients.opstatus",
+                "rightValue": "0",
+                "leftValueType": "value",
+                "rightValueType": "value",
+                "operator": "==="
+            }],
+            "parentId": "INVOKE_OBJECT_SERVICE_hadd2cb85f5f49688129c53ad9fe32e2",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SET_FORM_WIDGET_PROPERTY_Untitled__i4a22666188445ab9b6d8e02a5455d99",
+            "type": "SET_WIDGET_PROPERTY",
+            "itemType": "FORM",
+            "itemId": "frmRecipientDetails",
+            "widgetId": "flexSuccess",
+            "propertyName": "isVisible",
+            "propertyValue": "true",
+            "itemKUID": "jbf06e5a4a274e68928df71988fbba10",
+            "widgetKUID": "j6f58d81d0d04bf897ece1f3d9a9ba38",
+            "isSkinProperty": false,
+            "wType": "FlexContainer",
+            "forkedPlatform": "all",
+            "parentId": "_IF_CONDITION_bb751d45fecf4775bf7ef497bfa145d2",
+            "callbackType": null,
+            "widgetPath": "this.view.flexSuccess"
+        }, {
+            "id": "ADD_SNIPPET_i3484d62da384e8ca8ff48af12341ef5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.forceLayout();",
+            "parentId": "_IF_CONDITION_bb751d45fecf4775bf7ef497bfa145d2",
+            "callbackType": null
+        }, {
+            "id": "_ELSE_CONDITION_f95bddaa21e448f1b4f4cf132a752e0f",
+            "type": "ELSE_CONDITION",
+            "conditions": [],
+            "parentId": "INVOKE_OBJECT_SERVICE_hadd2cb85f5f49688129c53ad9fe32e2",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_a159d99ca3334784a5e6fd8bb112faf1",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": null,
+            "yesLabel": null,
+            "noLabel": null,
+            "alertIcon": null,
+            "alertMessage": "Record deletion failed! Please try again later.",
+            "messageType": "constant",
+            "alertHandler": null,
+            "parentId": "_ELSE_CONDITION_f95bddaa21e448f1b4f4cf132a752e0f",
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }]
+    }
+}

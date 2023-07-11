@@ -1,0 +1,69 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "66dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2ed6325556b4bb8b809c3a50b81e981",
+    "_top_": {
+        "type": "string",
+        "value": "24dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "500dp"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "lblEditPayeePhone",
+        "tbxPhone"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "flxPhoneNumber",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "hdffbe6eb3514a0f90d1104777881de6",
+    "layouttype": 4,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxEntryFields",
+    "pf": "frmEditRecipient",
+    "responsiveData": {
+        "b3": {
+            "width": {
+                "type": "string",
+                "value": "240dp"
+            }
+        }
+    },
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}

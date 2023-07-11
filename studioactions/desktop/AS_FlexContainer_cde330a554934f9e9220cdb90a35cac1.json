@@ -1,0 +1,45 @@
+{
+    "AS_FlexContainer_cde330a554934f9e9220cdb90a35cac1": {
+        "id": "AS_FlexContainer_cde330a554934f9e9220cdb90a35cac1",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "f8a588d5ddfe426d8a05b43128c89c3f",
+            "name": "frmAddRecipient"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "NAVIGATE_TO_FORM__jdb2f886ed5347fa9061ed4d527ad401",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmUserLogin",
+            "formKUID": "bb3bf5ba9f424749ab8be7b156b0c2c1",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "INVOKE_SERVICE_f9e055f9bc6b4bd09ccd39068249a342",
+            "callbackType": "Success",
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "INVOKE_SERVICE_f9e055f9bc6b4bd09ccd39068249a342",
+            "type": "INVOKE_IDENTITY_SERVICE",
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "operationname": "logout",
+                "servicename": "UserAuthentication",
+                "type": "identity",
+                "isDeepLinkRequired": false,
+                "login_type": "basic"
+            },
+            "enableMappingEditor": true,
+            "useDeviceBrowser": false,
+            "isDeepLinkRequired": false
+        }]
+    }
+}

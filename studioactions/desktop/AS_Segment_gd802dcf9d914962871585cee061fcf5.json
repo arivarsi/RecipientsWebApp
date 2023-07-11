@@ -1,0 +1,150 @@
+{
+    "AS_Segment_gd802dcf9d914962871585cee061fcf5": {
+        "id": "AS_Segment_gd802dcf9d914962871585cee061fcf5",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "jb25ba00fe3a4fe8bf91eaa552a62892",
+            "name": "frmRecipientList"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "NAVIGATE_TO_FORM__cc2b0e4a9b1a4387a931432ac5a7d413",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmRecipientDetails",
+            "formKUID": "jbf06e5a4a274e68928df71988fbba10",
+            "mappings": {
+                "ME_Mapping_gd3ccd899ff8400eac4048b305f97890": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_gd3ccd899ff8400eac4048b305f97890",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "lblFirstName",
+                        "propertyKey": "segPayeeList_lblFirstName",
+                        "widgetId": "segPayeeList",
+                        "widgetPath": "this.view.segPayeeList",
+                        "widgetType": "Segment",
+                        "dataType": "string",
+                        "itemId": "frmRecipientList",
+                        "collectionId": "selectedRowItems",
+                        "widgetKUID": "ad67d172e2434614bfd7b9ef493609b9",
+                        "itemKUID": "jb25ba00fe3a4fe8bf91eaa552a62892",
+                        "forkedPlatform": "all",
+                        "segmentChildInfo": {
+                            "kuid": "e9b0393d2b3548e0b3f1224fad65a1e5",
+                            "widgetType": "Label"
+                        }
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_h0637e73436e4c72ada168ce8d03e7e8": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h0637e73436e4c72ada168ce8d03e7e8",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "lblLastName",
+                        "propertyKey": "segPayeeList_lblLastName",
+                        "widgetId": "segPayeeList",
+                        "widgetPath": "this.view.segPayeeList",
+                        "widgetType": "Segment",
+                        "dataType": "string",
+                        "itemId": "frmRecipientList",
+                        "collectionId": "selectedRowItems",
+                        "widgetKUID": "ad67d172e2434614bfd7b9ef493609b9",
+                        "itemKUID": "jb25ba00fe3a4fe8bf91eaa552a62892",
+                        "forkedPlatform": "all",
+                        "segmentChildInfo": {
+                            "kuid": "d723f16ceadc40638966917d4a1735dc",
+                            "widgetType": "Label"
+                        }
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_e5b2bed877cc478f887a1f4fe768b196": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e5b2bed877cc478f887a1f4fe768b196",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "lblPhone",
+                        "propertyKey": "segPayeeList_lblPhone",
+                        "widgetId": "segPayeeList",
+                        "widgetPath": "this.view.segPayeeList",
+                        "widgetType": "Segment",
+                        "dataType": "string",
+                        "itemId": "frmRecipientList",
+                        "collectionId": "selectedRowItems",
+                        "widgetKUID": "ad67d172e2434614bfd7b9ef493609b9",
+                        "itemKUID": "jb25ba00fe3a4fe8bf91eaa552a62892",
+                        "forkedPlatform": "all",
+                        "segmentChildInfo": {
+                            "kuid": "b4e09a24aa524c1d916cead81240116f",
+                            "widgetType": "Label"
+                        }
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_i4210f45152b4d9d9510310448935f19": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_i4210f45152b4d9d9510310448935f19",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "lblPayeeID",
+                        "propertyKey": "segPayeeList_lblPayeeID",
+                        "widgetId": "segPayeeList",
+                        "widgetPath": "this.view.segPayeeList",
+                        "widgetType": "Segment",
+                        "dataType": "string",
+                        "itemId": "frmRecipientList",
+                        "collectionId": "selectedRowItems",
+                        "widgetKUID": "ad67d172e2434614bfd7b9ef493609b9",
+                        "itemKUID": "jb25ba00fe3a4fe8bf91eaa552a62892",
+                        "forkedPlatform": "all",
+                        "segmentChildInfo": {
+                            "kuid": "c49752fe37a548db816543ac41a8dde8",
+                            "widgetType": "Label"
+                        }
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_gd3ccd899ff8400eac4048b305f97890", "ME_Mapping_h0637e73436e4c72ada168ce8d03e7e8", "ME_Mapping_e5b2bed877cc478f887a1f4fe768b196", "ME_Mapping_i4210f45152b4d9d9510310448935f19"],
+            "parentId": "",
+            "enableMappingEditor": true,
+            "package": "",
+            "enableNavigationObj": true,
+            "navigationObj": "{\n    \"segPayeeList_lblFirstName\": voltmx.visualizer.getPropertyValue(self.view.segPayeeList.selectedRowItems[0][\"lblFirstName\"], \"text\"),\n    \"segPayeeList_lblLastName\": voltmx.visualizer.getPropertyValue(self.view.segPayeeList.selectedRowItems[0][\"lblLastName\"], \"text\"),\n    \"segPayeeList_lblPhone\": voltmx.visualizer.getPropertyValue(self.view.segPayeeList.selectedRowItems[0][\"lblPhone\"], \"text\"),\n    \"segPayeeList_lblPayeeID\": voltmx.visualizer.getPropertyValue(self.view.segPayeeList.selectedRowItems[0][\"lblPayeeID\"], \"text\"),\n    \"_meta_\": {\n        \"eventName\": \"\",\n        \"widgetId\": \"\"\n    }\n}",
+            "isCustomInput": false
+        }]
+    }
+}

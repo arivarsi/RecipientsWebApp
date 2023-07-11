@@ -1,0 +1,13 @@
+CREATE TABLE `Accounts`(
+	`AccountName` VARCHAR(30),
+	`AccountNumber` VARCHAR(10) NOT NULL,
+	`Balance` VARCHAR(10),
+	`CreatedBy` VARCHAR(32),
+	`CreatedDateTime` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+	`LastUpdatedBy` VARCHAR(32),
+	`LastUpdatedDateTime` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+	`SoftDeleteFlag` BOOLEAN,
+	PRIMARY KEY(`AccountNumber`)
+);
+ALTER TABLE `Accounts`
+	ADD CONSTRAINT `e65d86d18d3b5174efbc2f6a8a424d` UNIQUE KEY(`AccountNumber`);

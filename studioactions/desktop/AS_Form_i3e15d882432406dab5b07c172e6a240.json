@@ -1,0 +1,24 @@
+{
+    "AS_Form_i3e15d882432406dab5b07c172e6a240": {
+        "id": "AS_Form_i3e15d882432406dab5b07c172e6a240",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": "",
+            "KUID": "bb3bf5ba9f424749ab8be7b156b0c2c1",
+            "name": "frmUserLogin"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_cb7a3a778bc44e4cac04a0a9069c97e2",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.txtUserName.text = \"\";\nthis.view.txtPassword.text = \"\";",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "name" : "default",
+  "type" : "SAAS",
+  "encryptSecureInfo" : false,
+  "config" : {
+    "sampleData" : "Accounts.zip"
+  },
+  "format" : "excel",
+  "jsonpath" : false
+}

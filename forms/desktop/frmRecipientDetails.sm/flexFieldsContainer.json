@@ -1,0 +1,285 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "69.95%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "15.29%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s653eca8183a41359bcad079a2175bc6",
+    "_top_": {
+        "type": "string",
+        "value": "22.27%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "69.35%"
+    },
+    "actionsInfo": {
+        "skipMapping": true
+    },
+    "allboxes": [],
+    "allowhorizontalbounce": false,
+    "allowverticalbounce": true,
+    "bounces": true,
+    "canUpdateUI": true,
+    "children": [
+        "flexSeparator",
+        "flexRecipientID",
+        "flexSeparator1",
+        "flexFirstName",
+        "flexSeparator2",
+        "flexLastName",
+        "flexSeparator3",
+        "flexNickName",
+        "flexSeparator4",
+        "flexPhone",
+        "flxButtons"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "decelerat": false,
+    "dragg": false,
+    "enablescrolling": true,
+    "horizontalscrollindicator": true,
+    "id": "flexFieldsContainer",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b53353c904464d4cb9ae0f06a5a5c2f8",
+    "layouttype": 4,
+    "name": "kony.ui.FlexScrollContainer",
+    "pagingenabled": false,
+    "parent": "flxRecipientDetails",
+    "pf": "frmRecipientDetails",
+    "responsiveData": {
+        "b1": {
+            "right": {
+                "type": "string",
+                "value": ""
+            }
+        },
+        "b2": {
+            "right": {
+                "type": "string",
+                "value": "5%"
+            }
+        },
+        "b3": {
+            "right": {
+                "type": "string",
+                "value": "5%"
+            }
+        }
+    },
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "scrolldirection": 2,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "track": false,
+    "verticalscrollindicator": true,
+    "vizProps": {
+        "dynamicPropertiesConfig": {
+            "dataCollectionId": "records",
+            "flexKUID": "b53353c904464d4cb9ae0f06a5a5c2f8",
+            "methodName": "get",
+            "operationName": "Recipients",
+            "serviceName": "RecipientStorage",
+            "serviceType": "objectsvcs",
+            "viewType": "Detail form ui",
+            "widgetsConfig": {
+                "CreatedBy": {
+                    "dataType": "string",
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "CreatedBy"
+                        },
+                        "generate": false,
+                        "index": 5
+                    }
+                },
+                "CreatedDateTime": {
+                    "dataType": "date",
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "CreatedDateTime"
+                        },
+                        "generate": false,
+                        "index": 7
+                    }
+                },
+                "FirstName": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "b98093994cd241d4a82783ecc86082d0",
+                        "name": {
+                            "kuid": "f7b29051dd5e4e2d879293f23dae2907",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "i75637a00ddf4f5ab5554b99732c4ae9",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "FirstName"
+                        },
+                        "generate": true,
+                        "index": 1
+                    }
+                },
+                "LastName": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "ad5c71cc391641a28b14490b945c42cc",
+                        "name": {
+                            "kuid": "cc3670a6ae98498ab98838cdc56a7604",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "dbd3863dc8a04759949d96500b8010a4",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "LastName"
+                        },
+                        "generate": true,
+                        "index": 2
+                    }
+                },
+                "LastUpdatedBy": {
+                    "dataType": "string",
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "LastUpdatedBy"
+                        },
+                        "generate": false,
+                        "index": 6
+                    }
+                },
+                "LastUpdatedDateTime": {
+                    "dataType": "date",
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "LastUpdatedDateTime"
+                        },
+                        "generate": false,
+                        "index": 8
+                    }
+                },
+                "NickName": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "c1e664fb10cb4744b0c1311767d82642",
+                        "name": {
+                            "kuid": "c961ace1068d41e59ca06ed3ffc8d7c9",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "hf478525ba714a02bb70ce099e59460d",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "NickName"
+                        },
+                        "generate": true,
+                        "index": 3
+                    }
+                },
+                "Phone": {
+                    "dataType": "string",
+                    "layoutConfig": {
+                        "kuid": "a5ab57ae654e45499eb9fe4af5b81cfc",
+                        "name": {
+                            "kuid": "a62efc5a3163457a857d0ed402fa07b0",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "beca40e7196246a6b6b5d342ea566051",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "Phone"
+                        },
+                        "generate": true,
+                        "index": 4
+                    }
+                },
+                "RecipientID": {
+                    "dataType": "number",
+                    "layoutConfig": {
+                        "kuid": "j7124475fe814d0bb6c61a4705be6266",
+                        "name": {
+                            "kuid": "da29b5248973491cbb5e512fc1cb6d36",
+                            "wType": "Label"
+                        },
+                        "value": {
+                            "kuid": "a3a7abf7420c4361a8960ae7cc0c5873",
+                            "wType": "Label"
+                        },
+                        "wType": "FlexContainer"
+                    },
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "RecipientID"
+                        },
+                        "generate": true,
+                        "index": 0
+                    }
+                },
+                "SoftDeleteFlag": {
+                    "dataType": "boolean",
+                    "properties": {
+                        "displayName": {
+                            "key": "text",
+                            "value": "SoftDeleteFlag"
+                        },
+                        "generate": false,
+                        "index": 9
+                    }
+                }
+            }
+        }
+    },
+    "wType": "FlexScrollContainer",
+    "widgetalignment": 1,
+    "zindex": 2
+}

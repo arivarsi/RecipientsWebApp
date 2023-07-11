@@ -1,0 +1,160 @@
+{
+    "AS_Button_bf46e9a3f20145c3a96572d16e9aeab6": {
+        "id": "AS_Button_bf46e9a3f20145c3a96572d16e9aeab6",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "bb3bf5ba9f424749ab8be7b156b0c2c1",
+            "name": "frmUserLogin"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "LOADING_INDICATOR_e2f32ec01cc24f0ca34ed52b75a07a07",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "INVOKE_IDENTITY_SERVICE_c8c08baaa34d47219c4dcaa24dcd16d2",
+            "type": "INVOKE_IDENTITY_SERVICE",
+            "mappings": {
+                "ME_Mapping_gf1e6f563e814c01843f48848e61dec9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_gf1e6f563e814c01843f48848e61dec9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtUserName",
+                        "widgetPath": "this.view.txtUserName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmUserLogin",
+                        "widgetKUID": "e6d1001ac0fd4d2fbe0af4dff7cb44e8",
+                        "itemKUID": "bb3bf5ba9f424749ab8be7b156b0c2c1",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "userid",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "UserAuthentication",
+                            "type": "identity",
+                            "operationname": "login",
+                            "serviceid": "c8716ceb-38c0-44c0-ab2d-a59ebe1a2d75",
+                            "login_type": "basic",
+                            "isDeepLinkRequired": false
+                        }
+                    }
+                },
+                "ME_Mapping_efb9a4b30ef54ee181cd5dac3afe8676": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_efb9a4b30ef54ee181cd5dac3afe8676",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtPassword",
+                        "widgetPath": "this.view.txtPassword",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmUserLogin",
+                        "widgetKUID": "ede63dca35624a8bba96dd612d7455be",
+                        "itemKUID": "bb3bf5ba9f424749ab8be7b156b0c2c1",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "password",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "UserAuthentication",
+                            "type": "identity",
+                            "operationname": "login",
+                            "serviceid": "c8716ceb-38c0-44c0-ab2d-a59ebe1a2d75",
+                            "login_type": "basic",
+                            "isDeepLinkRequired": false
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_gf1e6f563e814c01843f48848e61dec9", "ME_Mapping_efb9a4b30ef54ee181cd5dac3afe8676"],
+            "serviceconfig": {
+                "servicename": "UserAuthentication",
+                "type": "identity",
+                "operationname": "login",
+                "serviceid": "c8716ceb-38c0-44c0-ab2d-a59ebe1a2d75",
+                "login_type": "basic",
+                "isDeepLinkRequired": false
+            },
+            "enableMappingEditor": true,
+            "useDeviceBrowser": false,
+            "isDeepLinkRequired": false
+        }, {
+            "id": "LOADING_INDICATOR_f8f073acce464efc845b3c1caf7ac061",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_IDENTITY_SERVICE_c8c08baaa34d47219c4dcaa24dcd16d2",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Success",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "NAVIGATE_TO_FORM__a149d2def9fa4596bef45f6dc2f1be95",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmAccountList",
+            "formKUID": "c3d5915a6c9e4f37bae14d3cb235773d",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "INVOKE_IDENTITY_SERVICE_c8c08baaa34d47219c4dcaa24dcd16d2",
+            "callbackType": "Success",
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_ae96064d1bb948c5922296c89a070ac7",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_IDENTITY_SERVICE_c8c08baaa34d47219c4dcaa24dcd16d2",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Failure",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "SHOW_ALERT_e0540ea5c0364909a55725d529fe889e",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": null,
+            "yesLabel": null,
+            "noLabel": null,
+            "alertIcon": null,
+            "alertMessage": "Login failed. Please try again.",
+            "messageType": "constant",
+            "alertHandler": null,
+            "parentId": "INVOKE_IDENTITY_SERVICE_c8c08baaa34d47219c4dcaa24dcd16d2",
+            "callbackType": "Failure",
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }]
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "76%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "15.38%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s7d81e30df144fdf9aeeb7490f6932ca",
+    "_top_": {
+        "type": "string",
+        "value": "22.33%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "69.44%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "flexTableHeader",
+        "segPayeeList"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "flxTable",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b3b01be828cc4b7890c691c197b1175c",
+    "layouttype": 2,
+    "masterType": 1,
+    "maxheight": {
+        "type": "string",
+        "value": "75%"
+    },
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxRecipientList",
+    "pf": "frmRecipientList",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 2
+}

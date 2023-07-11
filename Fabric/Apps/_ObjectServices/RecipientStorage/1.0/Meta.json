@@ -1,0 +1,12 @@
+{
+  "assets" : [ {
+    "name" : "Recipients.zip",
+    "type" : "sampleData"
+  } ],
+  "config" : {
+    "metadataSecurity" : "authorized_app_user",
+    "delete_strategy" : "hard-delete",
+    "uploadCache" : false,
+    "conflict_policy" : "none"
+  }
+}

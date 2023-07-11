@@ -1,0 +1,308 @@
+{
+    "AS_Button_f075866e472e4bfd9179ef31b25cc053": {
+        "id": "AS_Button_f075866e472e4bfd9179ef31b25cc053",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "f8a588d5ddfe426d8a05b43128c89c3f",
+            "name": "frmAddRecipient"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "_e314e4b789b84980a4b3591bcf57624a",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.tbxFirstName.text",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"\"",
+                "leftItemKUID": "f8a588d5ddfe426d8a05b43128c89c3f",
+                "leftWidgetKUID": "b8e4d05f22cb4c6e8e1bda38c7c8a1cf"
+            }, {
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.tbxLastName.text",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"\"",
+                "leftItemKUID": "f8a588d5ddfe426d8a05b43128c89c3f",
+                "leftWidgetKUID": "b630df1839ac4ad98895be7b68fa9ad0"
+            }, {
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.tbxPhone.text",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"\"",
+                "leftItemKUID": "f8a588d5ddfe426d8a05b43128c89c3f",
+                "leftWidgetKUID": "b3f68dc37b0242d08c88e3c46a994616"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "any"
+        }, {
+            "id": "_e13000970c8d4bbba5680bfb598a666d",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_d36ebe5bddc04aec9a3c222887ff79ff",
+            "selectedOption": "show",
+            "parentId": "_e13000970c8d4bbba5680bfb598a666d",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "INVOKE_OBJECT_SERVICE_f0beb0a33ec54b0b88f203ec9c95e320",
+            "type": "INVOKE_OBJECT_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": null,
+            "isoffline": null,
+            "isobject": true,
+            "mappings": {
+                "ME_Mapping_d50d94edb57644c7a10e92ea7f9efac2": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d50d94edb57644c7a10e92ea7f9efac2",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "tbxFirstName",
+                        "widgetPath": "this.view.tbxFirstName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmAddRecipient",
+                        "widgetKUID": "b8e4d05f22cb4c6e8e1bda38c7c8a1cf",
+                        "itemKUID": "f8a588d5ddfe426d8a05b43128c89c3f",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "FirstName",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "create"
+                        }
+                    }
+                },
+                "ME_Mapping_fe0cfb4d54164e1aad6577bafb3f50e2": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fe0cfb4d54164e1aad6577bafb3f50e2",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "tbxLastName",
+                        "widgetPath": "this.view.tbxLastName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmAddRecipient",
+                        "widgetKUID": "b630df1839ac4ad98895be7b68fa9ad0",
+                        "itemKUID": "f8a588d5ddfe426d8a05b43128c89c3f",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "LastName",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "create"
+                        }
+                    }
+                },
+                "ME_Mapping_i8254ea5c0cf4d058da021fef462da3d": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_i8254ea5c0cf4d058da021fef462da3d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "tbxNickName",
+                        "widgetPath": "this.view.tbxNickName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmAddRecipient",
+                        "widgetKUID": "h27c581b20eb496188270a684cb31e26",
+                        "itemKUID": "f8a588d5ddfe426d8a05b43128c89c3f",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "NickName",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "create"
+                        }
+                    }
+                },
+                "ME_Mapping_cc0f8d6f2b8345d58a4d5937f88d9ea5": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cc0f8d6f2b8345d58a4d5937f88d9ea5",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "tbxPhone",
+                        "widgetPath": "this.view.tbxPhone",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmAddRecipient",
+                        "widgetKUID": "b3f68dc37b0242d08c88e3c46a994616",
+                        "itemKUID": "f8a588d5ddfe426d8a05b43128c89c3f",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "Phone",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "create"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_d50d94edb57644c7a10e92ea7f9efac2", "ME_Mapping_fe0cfb4d54164e1aad6577bafb3f50e2", "ME_Mapping_i8254ea5c0cf4d058da021fef462da3d", "ME_Mapping_cc0f8d6f2b8345d58a4d5937f88d9ea5"],
+            "serviceconfig": {
+                "servicename": "RecipientStorage",
+                "type": "objectsvcs",
+                "objectname": "Recipients",
+                "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                "methodname": "create"
+            },
+            "parentId": "_e13000970c8d4bbba5680bfb598a666d",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "SHOW_ALERT_b96784bef81842a6b1d6176c846832cb",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Error",
+            "yesLabel": "OK",
+            "alertMessage": "Please Enter All The Fields",
+            "messageType": "constant",
+            "parentId": "_e314e4b789b84980a4b3591bcf57624a",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "LOADING_INDICATOR_ja0a8ebbb07e4dffa98490f872863a5e",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_OBJECT_SERVICE_f0beb0a33ec54b0b88f203ec9c95e320",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_IF_CONDITION_ca75fa28ebde4e64ab5e77340a73bdc9",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValue": "Recipients.opstatus",
+                "rightValue": "0",
+                "leftValueType": "value",
+                "rightValueType": "value",
+                "operator": "==="
+            }],
+            "parentId": "INVOKE_OBJECT_SERVICE_f0beb0a33ec54b0b88f203ec9c95e320",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SET_FORM_WIDGET_PROPERTY_Untitled__ja0f8acc62a04796a21d0e6142911f2e",
+            "type": "SET_WIDGET_PROPERTY",
+            "itemType": "FORM",
+            "itemId": "frmAddRecipient",
+            "widgetId": "flexSuccess",
+            "propertyName": "isVisible",
+            "propertyValue": "true",
+            "itemKUID": "f8a588d5ddfe426d8a05b43128c89c3f",
+            "widgetKUID": "e385f4bfdd2344a097dd5fbb3abdc4e3",
+            "isSkinProperty": false,
+            "wType": "FlexContainer",
+            "forkedPlatform": "all",
+            "parentId": "_IF_CONDITION_ca75fa28ebde4e64ab5e77340a73bdc9",
+            "callbackType": null,
+            "widgetPath": "this.view.flexSuccess"
+        }, {
+            "id": "ADD_SNIPPET_idbfb73e596044f9a236b1ccca25e77c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.forceLayout();",
+            "parentId": "_IF_CONDITION_ca75fa28ebde4e64ab5e77340a73bdc9",
+            "callbackType": null
+        }, {
+            "id": "_ELSE_CONDITION_c9ccf4218f024b6798994f7cd8156e06",
+            "type": "ELSE_CONDITION",
+            "conditions": [],
+            "parentId": "INVOKE_OBJECT_SERVICE_f0beb0a33ec54b0b88f203ec9c95e320",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_ja0d2812cc444909bce87788a7acd678",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": null,
+            "yesLabel": null,
+            "noLabel": null,
+            "alertIcon": null,
+            "alertMessage": "Record creation failed! Please try again later.",
+            "messageType": "constant",
+            "alertHandler": null,
+            "parentId": "_ELSE_CONDITION_c9ccf4218f024b6798994f7cd8156e06",
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }]
+    }
+}

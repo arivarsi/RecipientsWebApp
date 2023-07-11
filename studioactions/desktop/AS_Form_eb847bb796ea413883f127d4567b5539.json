@@ -1,0 +1,33 @@
+{
+    "AS_Form_eb847bb796ea413883f127d4567b5539": {
+        "id": "AS_Form_eb847bb796ea413883f127d4567b5539",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": "",
+            "KUID": "gfbea982609c4f5dadc8491cc61ab81e",
+            "name": "frmEditRecipient"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "SET_FORM_WIDGET_PROPERTY_Untitled__b69cf0079ecf4b9b95e24f7c573e0e2d",
+            "type": "SET_WIDGET_PROPERTY",
+            "itemType": "FORM",
+            "itemId": "frmEditRecipient",
+            "widgetId": "flexSuccess",
+            "propertyName": "isVisible",
+            "propertyValue": "false",
+            "itemKUID": "gfbea982609c4f5dadc8491cc61ab81e",
+            "widgetKUID": "a04c8ff286514fe0859f9c9d5736816f",
+            "isSkinProperty": false,
+            "wType": "FlexContainer",
+            "forkedPlatform": "all",
+            "parentId": null,
+            "widgetPath": "this.view.flexSuccess"
+        }]
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "AS_Button_a1315d85d7aa44859a739fb31e124327": {
+        "id": "AS_Button_a1315d85d7aa44859a739fb31e124327",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "f8a588d5ddfe426d8a05b43128c89c3f",
+            "name": "frmAddRecipient"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "SET_FORM_WIDGET_PROPERTY_Untitled__e6f617c93f4c4c27a113078898733073",
+            "type": "SET_WIDGET_PROPERTY",
+            "itemType": "FORM",
+            "itemId": "frmAddRecipient",
+            "widgetId": "flexSuccess",
+            "propertyName": "isVisible",
+            "propertyValue": "false",
+            "itemKUID": "f8a588d5ddfe426d8a05b43128c89c3f",
+            "widgetKUID": "e385f4bfdd2344a097dd5fbb3abdc4e3",
+            "isSkinProperty": false,
+            "wType": "FlexContainer",
+            "forkedPlatform": "all",
+            "parentId": null,
+            "widgetPath": "this.view.flexSuccess"
+        }, {
+            "id": "ADD_SNIPPET_db8ce9b8ebd64ca9aaa87910c979e6df",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.forceLayout();",
+            "parentId": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__e8ba9d18a45e4836a3932bd55c478333",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmRecipientList",
+            "formKUID": "jb25ba00fe3a4fe8bf91eaa552a62892",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "",
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }]
+    }
+}

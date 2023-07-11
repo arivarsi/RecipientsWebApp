@@ -1,0 +1,16 @@
+{
+  "subType" : "customapp",
+  "description" : "This app is created from Studio App RecipientsWebApp.\r\n",
+  "version" : "1.0",
+  "objectSvcs" : [ {
+    "name" : "AccountStorage",
+    "version" : "1.0",
+    "etag" : "eed214bf-78a1-494a-bf6c-204b1fe2104f"
+  }, {
+    "name" : "RecipientStorage",
+    "version" : "1.0",
+    "etag" : "b7e75d03-4bbe-4f9b-8af2-4776faaa66be"
+  } ],
+  "identity" : [ "UserAuthentication" ],
+  "identitySvcConf" : "{\"session_idle_timeout_mins\":20,\"session_max_duration_mins\":360,\"show_security_attributes\":false,\"is_integrity_enabled\":false,\"auto_extend\":true}"
+}

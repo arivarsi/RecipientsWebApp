@@ -1,0 +1,8 @@
+{
+  "filename": "RecipientsWebApp.zip",
+  "channels": "responsive_web",
+  "upgradable": false,
+  "displayname": "RecipientsWebApp",
+  "description": "Binary for RecipientsWebApp",
+  "version": "1.0.2"
+}

@@ -1,0 +1,56 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "36dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_right_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_skin_": "sf9fc64baae74f46aba560cb14bb0e04",
+    "_text_": "+",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "39dp"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "sc85f3cab0ea49ffa6c952441f972b6d",
+    "id": "btnAddPayee",
+    "ide_onClick": "AS_Button_bea434575de248a38c5f15f3664f75f1",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "d16f0dc28e974d06857685d449320606",
+    "name": "kony.ui.Button",
+    "parent": "flxToolbar",
+    "pf": "frmRecipientList",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 2
+}

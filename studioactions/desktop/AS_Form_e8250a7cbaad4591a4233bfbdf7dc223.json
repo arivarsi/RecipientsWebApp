@@ -1,0 +1,93 @@
+{
+    "AS_Form_e8250a7cbaad4591a4233bfbdf7dc223": {
+        "id": "AS_Form_e8250a7cbaad4591a4233bfbdf7dc223",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "gfbea982609c4f5dadc8491cc61ab81e",
+            "name": "frmEditRecipient"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "LOADING_INDICATOR_jccbbad7de2c48a7a076d8e4aa72455e",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "INVOKE_OBJECT_SERVICE_h48a061b5bd244d38b2745ebdb156cb4",
+            "type": "INVOKE_OBJECT_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": null,
+            "isoffline": null,
+            "isobject": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "RecipientStorage",
+                "type": "objectsvcs",
+                "objectname": "Recipients",
+                "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                "methodname": "get"
+            },
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_b1be23739abc469a9f2e7034ee18a375",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_OBJECT_SERVICE_h48a061b5bd244d38b2745ebdb156cb4",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_IF_CONDITION_d9b21de203934725a8ddd0934daad8ab",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValue": "Recipients.opstatus",
+                "rightValue": "0",
+                "leftValueType": "value",
+                "rightValueType": "value",
+                "operator": "==="
+            }],
+            "parentId": "INVOKE_OBJECT_SERVICE_h48a061b5bd244d38b2745ebdb156cb4",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_ELSE_CONDITION_jfd43aec6fc747d9929e5a3b69a76ec5",
+            "type": "ELSE_CONDITION",
+            "conditions": [],
+            "parentId": "INVOKE_OBJECT_SERVICE_h48a061b5bd244d38b2745ebdb156cb4",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_icf241658f3843b991cc357e446d92d3",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": null,
+            "yesLabel": null,
+            "noLabel": null,
+            "alertIcon": null,
+            "alertMessage": "Data fetch failed! Please try again later.",
+            "messageType": "constant",
+            "alertHandler": null,
+            "parentId": "_ELSE_CONDITION_jfd43aec6fc747d9929e5a3b69a76ec5",
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }]
+    }
+}

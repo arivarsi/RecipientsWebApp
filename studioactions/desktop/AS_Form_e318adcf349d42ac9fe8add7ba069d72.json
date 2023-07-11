@@ -1,0 +1,270 @@
+{
+    "AS_Form_e318adcf349d42ac9fe8add7ba069d72": {
+        "id": "AS_Form_e318adcf349d42ac9fe8add7ba069d72",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "gfbea982609c4f5dadc8491cc61ab81e",
+            "name": "frmEditRecipient"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "SET_FORM_WIDGET_PROPERTY_Untitled__e53751e9e4df4cc38457a3765da7c52c",
+            "type": "SET_WIDGET_PROPERTY",
+            "itemType": "FORM",
+            "itemId": "frmEditRecipient",
+            "widgetId": "flexSuccess",
+            "propertyName": "isVisible",
+            "propertyValue": "false",
+            "itemKUID": "gfbea982609c4f5dadc8491cc61ab81e",
+            "widgetKUID": "a04c8ff286514fe0859f9c9d5736816f",
+            "isSkinProperty": false,
+            "wType": "FlexContainer",
+            "forkedPlatform": "all",
+            "parentId": null,
+            "widgetPath": "this.view.flexSuccess"
+        }, {
+            "id": "INVOKE_SERVICE_d45ab1c8d26b401fb793c7120e5c4ec8",
+            "type": "INVOKE_OBJECT_SERVICE",
+            "inputparams": {
+                "$filter": [{
+                    "queryString": "\"RecipientID eq '\" + voltmx.visualizer.toNumber(self.view.lblPayeeID.text) + \"'\""
+                }]
+            },
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": null,
+            "isoffline": null,
+            "isobject": true,
+            "mappings": {
+                "ME_Mapping_d63bdd9522c44f659075870e76f7e814": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d63bdd9522c44f659075870e76f7e814",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblPayeeID",
+                        "widgetPath": "this.view.lblPayeeID",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmEditRecipient",
+                        "widgetKUID": "gd5a96d5cf864a6cbb73fe24f8f3df9b",
+                        "itemKUID": "gfbea982609c4f5dadc8491cc61ab81e",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "RecipientID",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "get"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_d63bdd9522c44f659075870e76f7e814"],
+            "serviceconfig": {
+                "servicename": "RecipientStorage",
+                "type": "objectsvcs",
+                "objectname": "Recipients",
+                "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                "methodname": "get"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "ADD_MAPPING_i9610dd5fce94afd8332589d92b10b90",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_c1699ce1d67e4c00968a8c105eff5a51": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_c1699ce1d67e4c00968a8c105eff5a51",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "FirstName",
+                        "dataType": "string",
+                        "collectionId": "records",
+                        "propertyPath": "[\"records\"][0][\"FirstName\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "get"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "tbxFirstName",
+                        "widgetPath": "this.view.tbxFirstName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmEditRecipient",
+                        "widgetKUID": "b6450e8074904c03a7b2d9914b9a9748",
+                        "itemKUID": "gfbea982609c4f5dadc8491cc61ab81e",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_h31ed4edaff04889bd593dfef6a4272d": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h31ed4edaff04889bd593dfef6a4272d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "LastName",
+                        "dataType": "string",
+                        "collectionId": "records",
+                        "propertyPath": "[\"records\"][0][\"LastName\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "get"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "tbxLastName",
+                        "widgetPath": "this.view.tbxLastName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmEditRecipient",
+                        "widgetKUID": "aae1dc2ced574dbc9df19015faa3e628",
+                        "itemKUID": "gfbea982609c4f5dadc8491cc61ab81e",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_h3fbbf7d1b8d49ec87debe2a2bc5e622": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h3fbbf7d1b8d49ec87debe2a2bc5e622",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "NickName",
+                        "dataType": "string",
+                        "collectionId": "records",
+                        "propertyPath": "[\"records\"][0][\"NickName\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "get"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "tbxNickName",
+                        "widgetPath": "this.view.tbxNickName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmEditRecipient",
+                        "widgetKUID": "eebf0fd5d2f840559e70816f1bff3589",
+                        "itemKUID": "gfbea982609c4f5dadc8491cc61ab81e",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_hf373c1ec3164226a0015f5020a39b61": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_hf373c1ec3164226a0015f5020a39b61",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Phone",
+                        "dataType": "string",
+                        "collectionId": "records",
+                        "propertyPath": "[\"records\"][0][\"Phone\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "get"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "tbxPhone",
+                        "widgetPath": "this.view.tbxPhone",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmEditRecipient",
+                        "widgetKUID": "caeb516a702d45fea44f143ac1670c15",
+                        "itemKUID": "gfbea982609c4f5dadc8491cc61ab81e",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_bbcc5217774841669513f4ec5c7f66a6": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_bbcc5217774841669513f4ec5c7f66a6",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "RecipientID",
+                        "dataType": "number",
+                        "collectionId": "records",
+                        "propertyPath": "[\"records\"][0][\"RecipientID\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "get"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblPayeeID",
+                        "widgetPath": "this.view.lblPayeeID",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmEditRecipient",
+                        "widgetKUID": "gd5a96d5cf864a6cbb73fe24f8f3df9b",
+                        "itemKUID": "gfbea982609c4f5dadc8491cc61ab81e",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_c1699ce1d67e4c00968a8c105eff5a51", "ME_Mapping_h31ed4edaff04889bd593dfef6a4272d", "ME_Mapping_h3fbbf7d1b8d49ec87debe2a2bc5e622", "ME_Mapping_hf373c1ec3164226a0015f5020a39b61", "ME_Mapping_bbcc5217774841669513f4ec5c7f66a6"],
+            "parentId": "INVOKE_SERVICE_d45ab1c8d26b401fb793c7120e5c4ec8",
+            "callbackType": "Callback",
+            "enableMappingEditor": true
+        }]
+    }
+}

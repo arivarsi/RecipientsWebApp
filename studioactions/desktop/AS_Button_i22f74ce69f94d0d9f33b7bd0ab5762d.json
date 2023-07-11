@@ -1,0 +1,70 @@
+{
+    "AS_Button_i22f74ce69f94d0d9f33b7bd0ab5762d": {
+        "id": "AS_Button_i22f74ce69f94d0d9f33b7bd0ab5762d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "gfbea982609c4f5dadc8491cc61ab81e",
+            "name": "frmEditRecipient"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "SET_FORM_WIDGET_PROPERTY_Untitled__f5914f461d11437585c7b08f0db693bd",
+            "type": "SET_WIDGET_PROPERTY",
+            "itemType": "FORM",
+            "itemId": "frmEditRecipient",
+            "widgetId": "flexSuccess",
+            "propertyName": "isVisible",
+            "propertyValue": "false",
+            "itemKUID": "gfbea982609c4f5dadc8491cc61ab81e",
+            "widgetKUID": "a04c8ff286514fe0859f9c9d5736816f",
+            "isSkinProperty": false,
+            "wType": "FlexContainer",
+            "forkedPlatform": "all",
+            "parentId": null,
+            "widgetPath": "this.view.flexSuccess"
+        }, {
+            "id": "NAVIGATE_TO_FORM__f644aee2a13e4066ac36b61975ca3990",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmRecipientDetails",
+            "formKUID": "jbf06e5a4a274e68928df71988fbba10",
+            "mappings": {
+                "ME_Mapping_je673efe609c4cad95c75d453b4f6637": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_je673efe609c4cad95c75d453b4f6637",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "propertyKey": "lblPayeeID_text",
+                        "widgetId": "lblPayeeID",
+                        "widgetPath": "this.view.lblPayeeID",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmEditRecipient",
+                        "widgetKUID": "gd5a96d5cf864a6cbb73fe24f8f3df9b",
+                        "itemKUID": "gfbea982609c4f5dadc8491cc61ab81e",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_je673efe609c4cad95c75d453b4f6637"],
+            "parentId": "",
+            "enableMappingEditor": true,
+            "package": "",
+            "enableNavigationObj": true,
+            "navigationObj": "{\n    \"lblPayeeID_text\": self.view.lblPayeeID.text,\n    \"_meta_\": {\n        \"eventName\": \"\",\n        \"widgetId\": \"\"\n    }\n}",
+            "isCustomInput": false
+        }]
+    }
+}

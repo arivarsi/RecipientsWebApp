@@ -1,0 +1,319 @@
+{
+    "AS_Form_f166302c45d24df1a5eb0da282274af2": {
+        "id": "AS_Form_f166302c45d24df1a5eb0da282274af2",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "jbf06e5a4a274e68928df71988fbba10",
+            "name": "frmRecipientDetails"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "LOADING_INDICATOR_b65ed235f224481eae54dd6d8533ecb6",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "INVOKE_OBJECT_SERVICE_ea320af286be47f2a52e2f6f3e201d1e",
+            "type": "INVOKE_OBJECT_SERVICE",
+            "inputparams": {
+                "$filter": [{
+                    "queryString": "\"RecipientID eq '\" + voltmx.visualizer.toNumber(self.view.lblRecipientIDValue.text) + \"'\""
+                }]
+            },
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": null,
+            "isoffline": null,
+            "isobject": true,
+            "mappings": {
+                "ME_Mapping_ff0be611a9dd4c5e879b13dec984e77e": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ff0be611a9dd4c5e879b13dec984e77e",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblRecipientIDValue",
+                        "widgetPath": "this.view.lblRecipientIDValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmRecipientDetails",
+                        "widgetKUID": "a3a7abf7420c4361a8960ae7cc0c5873",
+                        "itemKUID": "jbf06e5a4a274e68928df71988fbba10",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "RecipientID",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "get"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_ff0be611a9dd4c5e879b13dec984e77e"],
+            "serviceconfig": {
+                "servicename": "RecipientStorage",
+                "type": "objectsvcs",
+                "objectname": "Recipients",
+                "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                "methodname": "get"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_e7531fff698d4c3fb50c6d80116620f3",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_OBJECT_SERVICE_ea320af286be47f2a52e2f6f3e201d1e",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_IF_CONDITION_i1b811e228464ec99c604322eefcffad",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValue": "Recipients.opstatus",
+                "rightValue": "0",
+                "leftValueType": "value",
+                "rightValueType": "value",
+                "operator": "==="
+            }],
+            "parentId": "INVOKE_OBJECT_SERVICE_ea320af286be47f2a52e2f6f3e201d1e",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_ELSE_CONDITION_a4b26d401ea74bdc836a22f561fd7ed4",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_OBJECT_SERVICE_ea320af286be47f2a52e2f6f3e201d1e",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_a4fbd517934a4006800aa399b452f5d1",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": null,
+            "yesLabel": null,
+            "noLabel": null,
+            "alertIcon": null,
+            "alertMessage": "Data fetch failed! Please try again later.",
+            "messageType": "constant",
+            "alertHandler": null,
+            "parentId": "_ELSE_CONDITION_a4b26d401ea74bdc836a22f561fd7ed4",
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_MAPPING_c5e32bfbd0784cbb89bf0fd4020ca65d",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_h6c9823262b14736acf11f24b92e032d": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h6c9823262b14736acf11f24b92e032d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "RecipientID",
+                        "dataType": "number",
+                        "collectionId": "records",
+                        "propertyPath": "[\"records\"][0][\"RecipientID\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "get"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblRecipientIDValue",
+                        "widgetPath": "this.view.lblRecipientIDValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmRecipientDetails",
+                        "widgetKUID": "a3a7abf7420c4361a8960ae7cc0c5873",
+                        "itemKUID": "jbf06e5a4a274e68928df71988fbba10",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_e931d57e6cf14823ab8e6c3cd0e2198b": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e931d57e6cf14823ab8e6c3cd0e2198b",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "FirstName",
+                        "dataType": "string",
+                        "collectionId": "records",
+                        "propertyPath": "[\"records\"][0][\"FirstName\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "get"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblFirstNameValue",
+                        "widgetPath": "this.view.lblFirstNameValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmRecipientDetails",
+                        "widgetKUID": "i75637a00ddf4f5ab5554b99732c4ae9",
+                        "itemKUID": "jbf06e5a4a274e68928df71988fbba10",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_h481f071c93c4e208cc65689e1674553": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h481f071c93c4e208cc65689e1674553",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "LastName",
+                        "dataType": "string",
+                        "collectionId": "records",
+                        "propertyPath": "[\"records\"][0][\"LastName\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "get"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblLastNameValue",
+                        "widgetPath": "this.view.lblLastNameValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmRecipientDetails",
+                        "widgetKUID": "dbd3863dc8a04759949d96500b8010a4",
+                        "itemKUID": "jbf06e5a4a274e68928df71988fbba10",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_b8cc5c57986c4e87b57df26cd55a826f": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b8cc5c57986c4e87b57df26cd55a826f",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "NickName",
+                        "dataType": "string",
+                        "collectionId": "records",
+                        "propertyPath": "[\"records\"][0][\"NickName\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "get"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblNickNameValue",
+                        "widgetPath": "this.view.lblNickNameValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmRecipientDetails",
+                        "widgetKUID": "hf478525ba714a02bb70ce099e59460d",
+                        "itemKUID": "jbf06e5a4a274e68928df71988fbba10",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_da9c785298c04fff8d35b7a436cb0db2": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_da9c785298c04fff8d35b7a436cb0db2",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "Phone",
+                        "dataType": "string",
+                        "collectionId": "records",
+                        "propertyPath": "[\"records\"][0][\"Phone\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "RecipientStorage",
+                            "type": "objectsvcs",
+                            "objectname": "Recipients",
+                            "serviceid": "cde04e41-ef7c-422e-8f27-d4b05dc81396",
+                            "methodname": "get"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblPhoneValue",
+                        "widgetPath": "this.view.lblPhoneValue",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmRecipientDetails",
+                        "widgetKUID": "beca40e7196246a6b6b5d342ea566051",
+                        "itemKUID": "jbf06e5a4a274e68928df71988fbba10",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_h6c9823262b14736acf11f24b92e032d", "ME_Mapping_e931d57e6cf14823ab8e6c3cd0e2198b", "ME_Mapping_h481f071c93c4e208cc65689e1674553", "ME_Mapping_b8cc5c57986c4e87b57df26cd55a826f", "ME_Mapping_da9c785298c04fff8d35b7a436cb0db2"],
+            "parentId": "_IF_CONDITION_i1b811e228464ec99c604322eefcffad",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "AccountStorage_Accounts": {
+        "servicename": "AccountStorage",
+        "serviceid": "9d92a6b8-5064-4970-8213-18f32ef5a24e",
+        "type": "objectsvcs",
+        "objectname": "Accounts",
+        "objectid": "78399"
+    },
+    "RecipientStorage_Recipients": {
+        "servicename": "RecipientStorage",
+        "serviceid": "2ba5003a-99af-4288-96e5-c1f7eb1bb1bb",
+        "type": "objectsvcs",
+        "objectname": "Recipients",
+        "objectid": "78381"
+    }
+}
